@@ -1,0 +1,112 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+  grid-gap: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    -ms-grid-columns: 1fr 5fr;
+        grid-template-columns: 1fr 5fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+}
+
+.gallery {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+  }
+}
+
+.gallery_img {
+  scroll-snap-align: start;
+  margin-bottom: 10px;
+  min-width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery_img {
+    min-width: auto;
+    min-height: 100vh;
+  }
+}
+
+.lil-nav {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+}
+
+@media screen and (min-width: 1200px) {
+  .lil-nav {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: block;
+    -ms-grid-row: auto;
+        grid-row-start: auto;
+  }
+}
+
+.lil-nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 45vw;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .lil-nav a {
+    margin-bottom: 10px;
+    min-height: 200px;
+    min-width: 100%;
+  }
+}
+
+.lil-nav_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.lil-nav_img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: saturate(1);
+          filter: saturate(1);
+}
+/*# sourceMappingURL=style.css.map */
